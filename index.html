@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <title>PA #5 - Load Table from IndexedDB</title>
+</head>
+<body>
+    <!--Modal Popup-->
+    <div id="modal">
+      <div id="myModal">
+      </div>
+    </div>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper blue darken-3">
+            <a href="#!" class="brand-logo" id="title">Preparatory Assessment #5</a>
+            <ul class="right hide-on-med-and-down">
+              <li class="email"><a href="https://mail.google.com/">mrsdelmo@addu.edu.ph</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+
+    <!--Main Content-->
+    <div class="main">
+        <!-- Buttons-->
+        <div class="buttons">
+            <button id="load" onclick="loadData()"><i class="tiny material-icons">send</i> Load Data</button>
+            <button id="erase" onclick="eraseData()"><i class="tiny material-icons">delete</i> Erase Data</button>
+        </div>
+
+        <!-- Table -->
+        <div class="tbl">
+            <table class="highlight responsive-table">
+                <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>Item Name</th>
+                      <th>Price</th>
+                      <th>Action</th>
+                  </tr>
+                </thead>
+        
+                <tbody id="myTable">
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>
